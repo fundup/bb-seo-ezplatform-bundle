@@ -65,4 +65,13 @@ doctrine:
 $ php app/console doctrine:schema:update --force
 ```
 
-You should be able to use BB SEO Extension
+You should be able to use BB SEO Extension ...
+
+## How to use it ?
+You can add or edit meta-desription or title using UI ...
+
+
+To retrieve meta the only way for now is :
+``` html
+{{ render(controller("BruyereFreelanceSeoExtensionBundle:Front:getMetasFromContentId", {'contentId' : contentId } )) }}
+```

@@ -1,0 +1,24 @@
+{
+    "name": "bruyerefreelance/bb-seo-ezplatform-bundle",
+    "type": "symfony-bundle",
+    "description": "SEO Extension bundle for eZ Plateform aka eZ pblish 6",
+    "keywords": ["SEO", "extension eZ Plateform", "eZ Publish", "SEO Extension eZ Plateform"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Buyère Boris",
+            "email": "bruyere.freelance@gmail.com",
+            "homepage": "http://bruyere-freelance.fr"
+        }
+    ],
+    "require": {
+        "doctrine/doctrine-bundle": "~1.3",
+        "doctrine/orm": "^2.5",
+        "doctrine/dbal": "^2.5"
+    },
+    "autoload": {
+        "psr-0": { "BruyereFreelance\\BBSeoBundle": "" }
+    },
+    "target-dir": "BruyereFreelance\\BBSeoBundle",
+    "minimum-stability": "dev"
+}

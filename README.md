@@ -10,7 +10,6 @@ This extension allow to manage meta description and title ...
 
 ### Step 1: Download BruyereFreelanceSeoExtensionBundle using composer
 
-
 ``` bash
 $ composer require bruyerefreelance/bb-seo-ezplatform-bundle
 ```
@@ -29,7 +28,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new BruyereFreelance\BBSeoExtensionBundle\BruyereFreelanceSeoExtensionBundle(),
+        new BruyereFreelance\SeoExtensionBundle\BruyereFreelanceSeoExtensionBundle(),
     );
 }
 ```
@@ -40,4 +39,29 @@ Add configuration : content type enabled for SEO
 ``` yaml
 # app/config/config.yml
 bruyere_freelance_seo_extension:
-    content_type_identifier: ['article', 'page_simple']
+    content_type_identifier: ['article', 'page_simple'] #add your own ...
+    
+#add config for doctrine ORM
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver: %database_driver%
+                host: %database_host%
+                port: %database_port%
+                user: %database_user%
+                password: %database_password%
+                dbname: %database_name%
+                charset: UTF8
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+### Step 4: Update your schema
+
+``` bash
+$ php app/console doctrine:schema:update --force
+```
+
+You should be able to use BB SEO Extension

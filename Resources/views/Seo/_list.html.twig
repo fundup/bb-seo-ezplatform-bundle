@@ -1,0 +1,18 @@
+{% for metaUI in metaUIs %}
+    <h3>{{ metaUI.contentName }}</h3>
+    <div class="bb-meta-box">
+        <div class="bb-title">
+            <label for="title">Title</label>
+            <input class='send-form bb-meta-title'
+                   data-meta-type="title"
+                   data-content-id="{{ metaUI.contentId }}" value="{{ metaUI.Title }}" name="title">
+        </div>
+        <div class="bb-metadescr">
+            <label for="descr">Meta Description</label>
+                <textarea class='send-form bb-meta-descr'
+                          data-meta-type="meta-descr"
+                          data-content-id="{{ metaUI.contentId }}" name="descr">{{ metaUI.metaDescription | trim }}
+                </textarea>
+        </div>
+    </div>
+{% endfor %}

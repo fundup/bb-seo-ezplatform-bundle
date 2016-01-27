@@ -1,0 +1,28 @@
+system:
+    default:
+        yui:
+            modules:
+                bb-seoplugin: # module seo identifier
+                    dependencyOf: ['ez-platformuiapp']
+                    requires: ['ez-pluginregistry', 'plugin', 'base', 'bbseo-dashboardview', 'bbseo-dashboardservice']
+                    #parameter define in DependencyInjection
+                    path: %extending_platformui.public_dir%/js/apps/plugins/bb-seoplugin.js
+
+                #Navigation
+                bb-navigationplugin:
+                    requires: ['ez-pluginregistry', 'ez-viewservicebaseplugin']
+                    dependencyOf: ['ez-navigationhubviewservice']
+                    path: %extending_platformui.public_dir%/js/views/services/plugins/bb-navigationplugin.js
+
+                #Views
+                bbseo-dashboardview:
+                    requires: ['ez-serversideview']
+                    path: %extending_platformui.public_dir%/js/views/bb-dashboardview.js
+                bbseodashboardview-ez-template: # internal view name + '-ez-template' suffix
+                    type: 'template' # mandatory so that the template is available in JavaScript
+                    path: %extending_platformui.public_dir%/templates/bbseodashboardview.hbt
+
+                #service - logic on server side ...
+                bbseo-dashboardservice:
+                     requires: ['ez-serversideviewservice']
+                     path: %extending_platformui.public_dir%/js/views/services/bbseo-dashboardservice.js

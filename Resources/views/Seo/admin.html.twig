@@ -1,0 +1,50 @@
+{% extends "eZPlatformUIBundle::pjax_admin.html.twig" %}
+
+{% block header_title %}
+    <h1 class="ezconf-list-title">BB SEO Extension</h1>
+{% endblock %}
+
+{% block content %}
+    <section class="ez-tabs bb-seo-tabs" >
+        <ul class="ez-tabs-list">
+            <li class="ez-tabs-label is-tab-selected" data-tab-identifier="details"><a href="#bb-tabs-content">SEO content</a></li>
+            <li class="ez-tabs-label" data-tab-identifier="view"><a href="#bb-tabs-conf">Config</a></li>
+            <li class="ez-tabs-label" data-tab-identifier="dashboard"><a href="#bb-tabs-dashboard">Dashboard</a></li>
+        </ul>
+        <div class="ez-tabs-panels">
+            <div class="ez-tabs-panel is-tab-selected" id="bb-tabs-content">
+                <div class="ez-view-locationviewdetailstabview">
+                    <div class="ez-details-box">
+                        <h2 class="ez-details-box-title">All Content type ... will be splited</h2>
+                        <div class="ez-details-box-list">
+                            {% include "@BruyereFreelanceSeoExtension/Seo/_list.html.twig" with {'metaUIs': metaUIs} only %}
+                        </div>
+                    </div>
+                    <div class="ez-details-box">
+                        <h2 class="ez-details-box-title">Content Type 2 </h2>
+                        Dev in progress ...
+                    </div>
+                </div>
+            </div>
+
+            <div class="ez-tabs-panel" id="bb-tabs-conf">
+                <div class="ez-details-box">
+                    <h2 class="ez-details-box-title">Content Type used by BB SEO</h2>
+                    <div class="ez-details-box-list">
+                        {% include '@BruyereFreelanceSeoExtension/Seo/_dashboard.html.twig' %}
+                    </div>
+                </div>
+            </div>
+            <div class="ez-tabs-panel" id="bb-tabs-dashboard">
+                <div class="ez-details-box">
+                    <h2 class="ez-details-box-title">Dashboard BB SEO</h2>
+                    <div class="ez-details-box-list">
+                        Not available yet ...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block title %}List{% endblock %}

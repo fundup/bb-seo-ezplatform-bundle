@@ -1,0 +1,5 @@
+services:
+#    bruyere_freelance_seo_extension.controller.list:
+#        class: BruyereFreelance\SeoExtensionBundle\Controller\MetaController
+#        arguments: [@ezpublish.api.service.search]
+#        parent: ezsystems.platformui.controller.base

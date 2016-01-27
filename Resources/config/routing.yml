@@ -1,0 +1,15 @@
+#bruyere_freelance_seo_dashboard:
+#    path:     /dashboard
+#    defaults: { _controller: BruyereFreelanceSeoExtensionBundle:Meta:dashboard }
+#
+#bruyere_freelance_seo_list:
+#    path:     /list
+#    defaults: { _controller: BruyereFreelanceSeoExtensionBundle:Meta:list }
+
+bruyere_freelance_seo_admin_view:
+    path:     /adminview
+    defaults: { _controller: BruyereFreelanceSeoExtensionBundle:Meta:adminView }
+
+bruyere_freelance_seo_savemeta:
+    path:     /savemeta
+    defaults: { _controller: BruyereFreelanceSeoExtensionBundle:Meta:saveMeta }

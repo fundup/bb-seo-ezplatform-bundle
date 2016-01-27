@@ -1,0 +1,41 @@
+.ez-view-bbseodashboardview {
+    background-color: rgb(245, 244, 242);
+}
+.bb-seo-tabs .ez-details-box-list {
+    padding: 10px;
+}
+.bb-meta-box {
+    background: #fff;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.bb-meta-box label {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.bb-meta-box input, .bb-meta-box textarea {
+    border: none !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: 512px;
+    resize: none !important;
+    outline: none;
+    padding: 0 !important;
+}
+
+.bb-meta-title {
+    font-family: arial,sans-serif !important;
+    color: #1a0dab !important;
+    font-size: 18px !important;;
+}
+
+.bb-meta-descr {
+    font-family: arial,sans-serif !important;
+    color: #545454 !important;
+    font-size: 13px;
+}

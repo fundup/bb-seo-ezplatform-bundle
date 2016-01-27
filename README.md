@@ -38,6 +38,6 @@ public function registerBundles()
 
 Add configuration : content type enabled for SEO
 ``` yaml
-# app/config/security.yml
+# app/config/config.yml
 bruyere_freelance_seo_extension:
     content_type_identifier: ['article', 'page_simple']

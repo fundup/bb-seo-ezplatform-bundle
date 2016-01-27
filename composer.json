@@ -17,8 +17,8 @@
         "doctrine/dbal": "^2.5"
     },
     "autoload": {
-        "psr-0": { "BruyereFreelance\\BBSeoBundle": "" }
+        "psr-0": { "BruyereFreelance\\BBSeoExtensionBundle": "" }
     },
-    "target-dir": "BruyereFreelance\\BBSeoBundle",
+    "target-dir": "BruyereFreelance\\BBSeoExtensionBundle",
     "minimum-stability": "dev"
 }

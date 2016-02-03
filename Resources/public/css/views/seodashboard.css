@@ -17,6 +17,10 @@
     text-align: right;
     font-size: 10px;
     margin-right: 10px;
+    vertical-align: top;
+    top: 5px;
+    position: relative;
+    color: #999;
 }
 .bb-meta-box input, .bb-meta-box textarea {
     border: none !important;
@@ -38,4 +42,9 @@
     font-family: arial,sans-serif !important;
     color: #545454 !important;
     font-size: 13px;
+}
+.bb-url a {
+    font-family: arial,sans-serif !important;
+    color: #006621 !important;
+    font-size: 14px;
 }

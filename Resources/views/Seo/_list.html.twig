@@ -1,12 +1,20 @@
 {% for metaUI in metaUIs %}
     <h3>{{ metaUI.contentName }}</h3>
     <div class="bb-meta-box">
+        {#TITLE#}
         <div class="bb-title">
             <label for="title">Title</label>
             <input class='send-form bb-meta-title'
                    data-meta-type="title"
                    data-content-id="{{ metaUI.contentId }}" value="{{ metaUI.Title }}" name="title">
         </div>
+        {#URL#}
+        <div class="bb-url">
+            <label for="url">Link</label>
+            {% set contentUrl =  url( "ez_urlalias", {"contentId": metaUI.contentId} )%}
+            <a href="{{ contentUrl }}" target="_blank">{{ contentUrl | trim('http://') }}</a>
+        </div>
+        {#META DESCR#}
         <div class="bb-metadescr">
             <label for="descr">Meta Description</label>
                 <textarea class='send-form bb-meta-descr'

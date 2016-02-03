@@ -1,6 +1,14 @@
 .ez-view-bbseodashboardview {
     background-color: rgb(245, 244, 242);
 }
+/*made with*/
+.pull-right {
+    float: right;
+}
+.bb-made-wi a{
+    color: #e22e2e !important;
+}
+
 .bb-seo-tabs .ez-details-box-list {
     padding: 10px;
 }
